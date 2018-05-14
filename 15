@@ -1,0 +1,37 @@
+Lesson-15
+
+Components in vue are reusable piece of code.
+When we create a instances like
+
+new Vue({
+==
+==
+
+})
+
+Then there are only single data objects but
+
+In components, multiple instances can be used. All that instances share the data with some function.
+
+In 15.1 we used component and added a button in it to change the {{ name }}
+using data return :
+
+data: function(){
+	return "Yoshi";
+}
+
+now clicking on the button wont change/alter the output of the other instances like vue-app-two ( its title wont change, because we are doing our work in components) 
+but in 15.2
+
+when we used 
+
+var data ={
+	name: 'Yoshi' 
+}
+
+this function externally at the top, then out javascript runs at the load of the page and hence it changes the data of vue-app-two title too.
+(components might save if, we return a fresh object, but in the image, we returned our externally created variable and hence changed the statement of the other instance too)
+
+that's why we use a fresh object each time in return statement of components...
+
+:}
